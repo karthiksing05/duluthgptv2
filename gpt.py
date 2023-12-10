@@ -10,6 +10,8 @@ from langchain.vectorstores import FAISS
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.llms.huggingface_text_gen_inference import HuggingFaceTextGenInference
 
+# os.environ["HUGGINGFACEHUB_API_TOKEN"] = "test"
+
 ############ TEXT LOADERS ############
 # Functions to read different file types
 def read_pdf(file_path):
