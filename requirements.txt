@@ -1,0 +1,17 @@
+flask
+langchain
+accelerate
+langchain_experimental==0.0.4
+python-docx
+PyPDF2
+openai
+transformers
+transformers[torch]
+gunicorn
+tiktoken
+InstructorEmbedding
+sentence-transformers
+faiss-cpu
+wit
+text_generation
+pandas
