@@ -7,10 +7,8 @@ import utils
 
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores import FAISS
-from langchain.embeddings import HuggingFaceInstructEmbeddings
+from langchain.embeddings import HuggingFaceInferenceAPIEmbeddings
 from langchain.llms.huggingface_text_gen_inference import HuggingFaceTextGenInference
-
-# os.environ["HUGGINGFACEHUB_API_TOKEN"] = "test"
 
 ############ TEXT LOADERS ############
 # Functions to read different file types
@@ -53,13 +51,8 @@ text = read_documents_from_directory(train_directory)
 char_text_splitter = CharacterTextSplitter(separator="\n", chunk_size=800, 
                                     chunk_overlap=200, length_function=len)
 
-# embeddings = HuggingFaceEmbeddings(
-#     model_name="sentence-transformers/multi-qa-MiniLM-L6-cos-v1",
-#     cache_folder=os.getcwd() + "\embeddings"
-# )
-
-embeddings = HuggingFaceInstructEmbeddings(
-    query_instruction="Represent the query for retrieval: "
+embeddings = HuggingFaceInferenceAPIEmbeddings(
+    api_key=os.getenv("HUGGINGFACEHUB_API_TOKEN"), model_name="sentence-transformers/multi-qa-mpnet-base-dot-v1"
 )
 
 text_chunks = char_text_splitter.split_text(text)
@@ -88,10 +81,10 @@ def askQuestion(query):
     docStr = "Context:\n\n" + docStr
     docStr += f"\n\nNote: if there is no relevant information given to you in the context, do not answer this question with outside information. Say I don't know and tell the student to find an admin.\n\nQuestion: {query}\nAnswer:"
 
-    # try:
-    data = llm(docStr)
-    # except text_generation.errors.UnknownError:
-    #     return "DuluthGPT couldn't generate a proper response: try asking the question in a different way!"
+    try:
+        data = llm(docStr)
+    except text_generation.errors.UnknownError:
+        return "DuluthGPT couldn't generate a proper response: try asking the question in a different way!"
 
     data = data[:data.rfind(".")]
     data += "."
