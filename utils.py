@@ -116,5 +116,5 @@ def updateCalendarEvents():
         )
         finalStr += "\n\n"
 
-    with open("docs\\Calendar.txt", "w") as f:
+    with open("docs\Calendar.txt", "w") as f:
         f.write(finalStr)
