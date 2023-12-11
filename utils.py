@@ -66,7 +66,7 @@ GENIUS, can infinitely scale this!
 
 def updateCalendarEvents():
 
-    df = pd.read_csv("data\Calendar.csv")
+    df = pd.read_csv("data/Calendar.csv")
 
     for i, row in df.iterrows():
         row = list(row)
@@ -116,5 +116,5 @@ def updateCalendarEvents():
         )
         finalStr += "\n\n"
 
-    with open("docs\Calendar.txt", "w") as f:
+    with open("docs/Calendar.txt", "w") as f:
         f.write(finalStr)
