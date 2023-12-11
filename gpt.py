@@ -7,7 +7,7 @@ import utils
 
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores import FAISS
-from langchain.embeddings import TensorflowHubEmbeddings
+from langchain.embeddings import HuggingFaceInstructEmbeddings
 from langchain.llms.huggingface_text_gen_inference import HuggingFaceTextGenInference
 
 # os.environ["HUGGINGFACEHUB_API_TOKEN"] = "test"
@@ -58,7 +58,9 @@ char_text_splitter = CharacterTextSplitter(separator="\n", chunk_size=800,
 #     cache_folder=os.getcwd() + "\embeddings"
 # )
 
-embeddings = TensorflowHubEmbeddings()
+embeddings = HuggingFaceInstructEmbeddings(
+    query_instruction="Represent the query for retrieval: "
+)
 
 text_chunks = char_text_splitter.split_text(text)
 
