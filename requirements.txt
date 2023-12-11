@@ -15,6 +15,3 @@ faiss-cpu
 wit
 text_generation
 pandas
-tensorflow-hub
-tensorflow_text
-tensorflow
