@@ -52,7 +52,7 @@ char_text_splitter = CharacterTextSplitter(separator="\n", chunk_size=800,
                                     chunk_overlap=200, length_function=len)
 
 embeddings = HuggingFaceInferenceAPIEmbeddings(
-    api_key=os.getenv("HUGGINGFACEHUB_API_TOKEN"), model_name="sentence-transformers/multi-qa-mpnet-base-dot-v1"
+    api_key=os.getenv("HUGGINGFACEHUB_API_TOKEN"), model_name="sentence-transformers/multi-qa-MiniLM-L6-cos-v1"
 )
 
 text_chunks = char_text_splitter.split_text(text)
@@ -63,7 +63,7 @@ retriever = docsearch.as_retriever(lambda_val=0.025, k=2, filter=None)
 
 llm = HuggingFaceTextGenInference(
     inference_server_url="https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-alpha",
-    max_new_tokens=300,
+    max_new_tokens=512,
     top_k=10,
     top_p=0.95,
     typical_p=0.95,
