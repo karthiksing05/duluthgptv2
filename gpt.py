@@ -65,8 +65,7 @@ llm = HuggingFaceTextGenInference(
     inference_server_url="https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-alpha",
     max_new_tokens=512,
     top_k=10,
-    top_p=0.95,
-    typical_p=0.95,
+    top_p=0.3,
     temperature=0.01,
     repetition_penalty=1.03,
 )
@@ -84,7 +83,9 @@ def askQuestion(query):
     try:
         data = llm(docStr)
     except text_generation.errors.UnknownError:
-        return "DuluthGPT couldn't generate a proper response: try asking the question in a different way!"
+        return "DuluthGPT couldn't generate a proper response or is still loading: try asking the question in a different way or try refreshing the page!"
+    except text_generation.errors.RateLimitExceededError:
+        return "Oops! Looks like a lot of people are using DuluthGPT right now! Please try again later."
 
     data = data[:data.rfind(".")]
     data += "."

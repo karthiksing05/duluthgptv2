@@ -1,3 +1,4 @@
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -6,6 +7,7 @@
 <html>
 	<head>
 		<title>DuluthGPT</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -35,8 +37,8 @@
 								</div>
 							</div>
 						</div>
-						<div id="messageFormeight" class="card-body msg_card_body">
-							<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmO9xDiMV2AGTY_UIhq2bTF8Ld_Z36i0zp8g&usqp=CAU" class="rounded-circle user_img_msg"></div><div class="msg_container">Hello! I'm DuluthGPT, a chatbot designed to help you with any high school questions you may have.<br>Here are some questions you can ask me!<br>•"Who teaches AP Computer Science A?"<br>• "What are some STEM-related clubs I can join?"<br>• "When is the next Digital Learning Day?"<br>• "What are some scholarships I may be eligible for?"<span class="msg_time">00:00</span></div></div>
+						<div id="messageChatbox" class="card-body msg_card_body">
+							<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmO9xDiMV2AGTY_UIhq2bTF8Ld_Z36i0zp8g&usqp=CAU" class="rounded-circle user_img_msg"></div><div class="msg_container">Hello! I'm DuluthGPT, a chatbot designed to help you with any high school questions you may have.<br>Here are some questions you can ask me!<br>• "Who teaches AP Computer Science A?"<br>• "What are some STEM-related clubs I can join?"<br>• "When is the next Digital Learning Day?"<br>• "What are some scholarships I may be eligible for?"<span class="msg_time">00:00</span></div></div>
 							
 						</div>
 						<div class="card-footer">
@@ -51,7 +53,6 @@
 				</div>
 			</div>
 		</div>
-		
 		<script>
 			$(document).ready(function() {
 				$("#messageArea").on("submit", function(event) {
@@ -67,9 +68,9 @@
 					var userHtml = '<div class="d-flex justify-content-end mb-4"><div class="msg_container_send">' + rawText + '<span class="msg_time_send">'+ str_time + '</span></div><div class="img_cont_msg"><img src="https://i.ibb.co/d5b84Xw/Untitled-design.png" class="rounded-circle user_img_msg"></div></div>';
 					
 					$("#text").val("");
-					$("#messageFormeight").append(userHtml);
+					$("#messageChatbox").append(userHtml);
 
-                    $("#messageFormeight").scrollTop($("#messageFormeight")[0].scrollHeight);
+                    $("#messageChatbox").scrollTop($("#messageChatbox")[0].scrollHeight);
 
 					$.ajax({
 						data: {
@@ -79,8 +80,8 @@
 						url: "/get",
 					}).done(function(data) {
 						var botHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmO9xDiMV2AGTY_UIhq2bTF8Ld_Z36i0zp8g&usqp=CAU" class="rounded-circle user_img_msg"></div><div class="msg_container">' + data + '<span class="msg_time">' + str_time + '</span></div></div>';
-						$("#messageFormeight").append($.parseHTML(botHtml));
-                        $("#messageFormeight").scrollTop($("#messageFormeight")[0].scrollHeight);
+						$("#messageChatbox").append($.parseHTML(botHtml));
+                        $("#messageChatbox").scrollTop($("#messageChatbox")[0].scrollHeight);
 					});
 					event.preventDefault();
 				});
