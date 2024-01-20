@@ -28,15 +28,15 @@ For 5th period, Mr. Ambler has 9th grade advisement and lunch.
 For 6th period, Mr. Ambler teaches 9th Grade Literature and Composition, also called 9th Lit.
 For 7th period, Mr. Ambler teaches 9th Grade Literature and Composition, also called 9th Lit. 
 
-Jacqueline Anderson-Cain, also known as Ms. Anderson-Cain, is a teacher at Duluth High School.
+Jacqueline Anderson-Cain, also known as Ms. Cain, is a teacher at Duluth High School.
 Ms. Anderson-Cain teaches in room 6-211 and works in the Social Studies department.
-For 1st period, Ms. Anderson-Cain teaches AP Macroeconomics, also called AP Macro.
-For 2nd period, Ms. Anderson-Cain teaches AP Macroeconomics, also called AP Macro.
-For 3rd period, Ms. Anderson-Cain has a planning period.
-For 4th period, Ms. Anderson-Cain teaches Economics and Personal Finance HON.
-For 5th period, Ms. Anderson-Cain teaches Economics and Personal Finance HON.
-For 6th period, Ms. Anderson-Cain has 12th grade advisement and lunch.
-For 7th period, Ms. Anderson-Cain teaches AP Macroeconomics, also called AP Macro. 
+For 1st period, Ms. Cain teaches AP Macroeconomics, also called AP Macro.
+For 2nd period, Ms. Cain teaches AP Macroeconomics, also called AP Macro.
+For 3rd period, Ms. Cain has a planning period.
+For 4th period, Ms. Cain teaches Economics and Personal Finance HON.
+For 5th period, Ms. Cain teaches Economics and Personal Finance HON.
+For 6th period, Ms. Cain has 12th grade advisement and lunch.
+For 7th period, Ms. Cain teaches AP Macroeconomics, also called AP Macro. 
 
 Andrea Anderson, also known as Ms. Anderson, is a teacher at Duluth High School.
 Ms. Anderson teaches in TR 11 and works in the ITC and Math department.
@@ -1286,7 +1286,7 @@ For 5th period, Mr. Woodard teaches World History.
 For 6th period, Mr. Woodard has 10th grade advisement and lunch.
 For 7th period, Mr. Woodard teaches World History. 
 
-Brooke Wright, also known as Ms. Wright, is a teacher at Duluth High School.
+Brooke Wright, also known as Ms. Wright or Coach Wright, is a teacher at Duluth High School.
 Ms. Wright teaches in room 526 and works in the Language Arts department.
 For 1st period, Ms. Wright teaches 10th Grade Literature and Composition, also called 10th Lit HON.
 For 2nd period, Ms. Wright teaches 10th Grade Literature and Composition, also called 10th Lit HON.
