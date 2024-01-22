@@ -8,10 +8,13 @@ r = redis.Redis(
 )
 
 for xKey in r.scan_iter("userExchange-*"):
-    res = dict(r.hgetall(xKey))
-    strRes = {}
-    for key, val in res.items():
-        strRes[str(key.decode('utf-8'))] = str(val.decode('utf-8'))
-    with open(f"logs\\{xKey.decode('utf-8')}.txt", "w+") as f:
-        f.write(str(strRes))
-    r.delete(xKey)
+    try:
+        res = dict(r.hgetall(xKey))
+        strRes = {}
+        for key, val in res.items():
+            strRes[str(key.decode('utf-8'))] = str(val.decode('utf-8'))
+        with open(f"logs\\{xKey.decode('utf-8')}.txt", "w+") as f:
+            f.write(str(strRes))
+        r.delete(xKey)
+    except UnicodeEncodeError:
+        r.delete(xKey)

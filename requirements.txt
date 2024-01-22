@@ -11,7 +11,7 @@ gunicorn
 tiktoken
 InstructorEmbedding
 sentence-transformers
-faiss-cpu
+chromadb
 wit
 text_generation
 pandas

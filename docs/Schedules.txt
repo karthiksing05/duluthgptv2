@@ -202,13 +202,11 @@ Laura Clark, also known as Ms. Clark, is a teacher at Duluth High School.
 Ms. Clark teaches in room 533 and works in the Language Arts department.
 For 1st period, Ms. Clark teaches AP Language and Composition, also called AP Lang.
 For 2nd period, Ms. Clark teaches British Literature and Composition Honors, also called Brit Lit Honors. 
-For 3rd period, Ms. Clark teaches Dual Enrollmen. 
-For English 1101.
+For 3rd period, Ms. Clark teaches Dual Enrollment English 1101.
 For 4th period, Ms. Clark has 12th grade advisement and lunch.
 For 5th period, Ms. Clark teaches British Literature and Composition, or Brit Lit.
 For 6th period, Ms. Clark has a planning period.
-For 7th period, Ms. Clark teaches Dual Enrollmen. 
-For English 1101. 
+For 7th period, Ms. Clark teaches Dual Enrollment English 1101. 
 
 Shyla Coleman, also known as Ms. Coleman, is a teacher at Duluth High School.
 Ms. Coleman teaches in room 6-409 and works in the Science department.
@@ -776,43 +774,25 @@ For 5th period, Ms. McKay has 9th grade advisement and lunch.
 For 6th period, Ms. McKay teaches Accelerated Geometry.
 For 7th period, Ms. McKay teaches Geometry. 
 
-Jeremy Mitchell, also known as Mr.
-Mitchell, is a teacher at Duluth High School.
-Mr.
-Mitchell teaches in room 506 and works in the Math department.
-For 1st period, Mr.
-Mitchell has a planning period.
-For 2nd period, Mr.
-Mitchell teaches Geometry.
-For 3rd period, Mr.
-Mitchell teaches Geometry.
-For 4th period, Mr.
-Mitchell teaches Geometry Intervention.
-For 5th period, Mr.
-Mitchell teaches Geometry Intervention.
-For 6th period, Mr.
-Mitchell teaches Geometry Intervention.
-For 7th period, Mr.
-Mitchell teaches lunch. 
+Jeremy Mitchell, also known as Mr. Mitchell, is a teacher at Duluth High School.
+Mr. Mitchell teaches in room 506 and works in the Math department.
+For 1st period, Mr. Mitchell has a planning period.
+For 2nd period, Mr. Mitchell teaches Geometry.
+For 3rd period, Mr. Mitchell teaches Geometry.
+For 4th period, Mr. Mitchell teaches Geometry Intervention.
+For 5th period, Mr. Mitchell teaches Geometry Intervention.
+For 6th period, Mr. Mitchell teaches Geometry Intervention.
+For 7th period, Mr. Mitchell teaches lunch. 
 
-Leonard Mize, also known as Mr.
-Mize, is a teacher at Duluth High School.
-Mr.
-Mize teaches in room 508 and works in the Math department.
-For 1st period, Mr.
-Mize has a planning period.
-For 2nd period, Mr.
-Mize teaches AP Calculus AB, also called AP Calc AB.
-For 3rd period, Mr.
-Mize teaches AP Calculus AB, also called AP Calc AB.
-For 4th period, Mr.
-Mize teaches Advanced Financial Algebra.
-For 5th period, Mr.
-Mize has a planning period.
-For 6th period, Mr.
-Mize teaches Advanced Financial Algebra.
-For 7th period, Mr.
-Mize teaches Advanced Financial Algebra. 
+Leonard Mize, also known as Mr. Mize, is a teacher at Duluth High School.
+Mr. Mize teaches in room 508 and works in the Math department.
+For 1st period, Mr. Mize has a planning period.
+For 2nd period, Mr. Mize teaches AP Calculus AB, also called AP Calc AB.
+For 3rd period, Mr. Mize teaches AP Calculus AB, also called AP Calc AB.
+For 4th period, Mr. Mize teaches Advanced Financial Algebra.
+For 5th period, Mr. Mize has a planning period.
+For 6th period, Mr. Mize teaches Advanced Financial Algebra.
+For 7th period, Mr. Mize teaches Advanced Financial Algebra. 
 
 Laura Moon, also known as Ms. Moon, is a teacher at Duluth High School.
 Ms. Moon teaches in room 201B and works in the Multi-language Learning department.
@@ -1011,10 +991,8 @@ For 2nd period, Ms. Robison teaches WGT TN.
 For 3rd period, Ms. Robison teaches INTRO Health SCI.
 For 4th period, Ms. Robison teaches lunch DUTY.
 For 5th period, Ms. Robison has a planning period.
-For 6th period, Ms. Robison teaches Body Sculpting. 
-For ATHLETES BLOCK.
-For 7th period, Ms. Robison teaches Body Sculpting. 
-For ATHLETES BLOCK. 
+For 6th period, Ms. Robison teaches Body Sculpting and ATHLETES BLOCK.
+For 7th period, Ms. Robison teaches Body Sculpting and ATHLETES BLOCK. 
 
 Jackelim Rodriguez-Guzman, also known as Ms. Rodriguez-Guzman, is a teacher at Duluth High School.
 Ms. Rodriguez-Guzman teaches in room 119 and works in the World Languages department.
@@ -1026,45 +1004,28 @@ For 3rd period, Ms. Rodriguez-Guzman teaches AP Spanish Language.
 For 4th period, Ms. Rodriguez-Guzman teaches lunch DUTY.
 For 5th period, Ms. Rodriguez-Guzman has a planning period.
 For 6th period, Ms. Rodriguez-Guzman teaches Spanish 4 Honors, or Spanish IV Honors. 
-For 7th period, Ms. Rodriguez-Guzman teaches Spanis. 
-For Native Speakers 3 or Spanis. 
-For Native Speakers III. 
+For 7th period, Ms. Rodriguez-Guzman teaches Spanish for Native Speakers 3 or Spanish for Native Speakers III. 
 
 Delia Rodriguez, also known as Ms. Rodriguez, is a teacher at Duluth High School.
 Ms. Rodriguez teaches in room 112 and works in the World Languages department.
 For 1st period, Ms. Rodriguez teaches Spanis. 
-For Native Speakers 1 or Spanis. 
-For Native Speakers I.
-For 2nd period, Ms. Rodriguez teaches Spanis. 
-For Native Speakers 1 or Spanis. 
-For Native Speakers I.
+For Native Speakers 1 or Spanish for Native Speakers I.
+For 2nd period, Ms. Rodriguez teaches Spanish for Native Speakers 1 or Spanish for Native Speakers I.
 For 3rd period, Ms. Rodriguez teaches Spanish 1 or Spanish I HON.
 For 4th period, Ms. Rodriguez has a planning period.
 For 5th period, Ms. Rodriguez has 10th grade advisement and lunch.
-For 6th period, Ms. Rodriguez teaches Spanis. 
-For Native Speakers 1 or Spanis. 
-For Native Speakers I.
-For 7th period, Ms. Rodriguez teaches Spanis. 
-For Native Speakers 1 or Spanis. 
-For Native Speakers I. 
+For 6th period, Ms. Rodriguez teaches Spanish for Native Speakers 1 or Spanish for Native Speakers I.
+For 7th period, Ms. Rodriguez teaches Spanish for Native Speakers 1 or Spanish for Native Speakers I. 
 
 Melisa Rodriguez, also known as Ms. Rodriguez, is a teacher at Duluth High School.
 Ms. Rodriguez teaches in room 112 and works in the World Languages department.
-For 1st period, Ms. Rodriguez teaches Spanis. 
-For Native Speakers 1 or Spanis. 
-For Native Speakers I.
-For 2nd period, Ms. Rodriguez teaches Spanis. 
-For Native Speakers 1 or Spanis. 
-For Native Speakers I.
+For 1st period, Ms. Rodriguez teaches Spanish for Native Speakers 1 or Spanish for Native Speakers I.
+For 2nd period, Ms. Rodriguez teaches Spanish for Native Speakers 1 or Spanish for Native Speakers I.
 For 3rd period, Ms. Rodriguez teaches Spanish 1 or Spanish I HON.
 For 4th period, Ms. Rodriguez has a planning period.
 For 5th period, Ms. Rodriguez has 10th grade advisement and lunch.
-For 6th period, Ms. Rodriguez teaches Spanis. 
-For Native Speakers 1 or Spanis. 
-For Native Speakers I.
-For 7th period, Ms. Rodriguez teaches Spanis. 
-For Native Speakers 1 or Spanis. 
-For Native Speakers I. 
+For 6th period, Ms. Rodriguez teaches Spanish for Native Speakers 1 or Spanish for Native Speakers I.
+For 7th period, Ms. Rodriguez teaches Spanish for Native Speakers 1 or Spanish for Native Speakers I. 
 
 Jonathan Roy, also known as Mr. Roy, is a teacher at Duluth High School.
 Mr. Roy teaches in room 301 and works in the Career Technical Education department.

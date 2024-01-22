@@ -6,7 +6,8 @@ import text_generation
 import utils
 
 from langchain.text_splitter import CharacterTextSplitter
-from langchain.vectorstores import FAISS
+from langchain.vectorstores import Chroma
+from langchain.schema.document import Document
 from langchain.embeddings import HuggingFaceInferenceAPIEmbeddings
 from langchain.llms.huggingface_text_gen_inference import HuggingFaceTextGenInference
 
@@ -57,7 +58,9 @@ embeddings = HuggingFaceInferenceAPIEmbeddings(
 
 text_chunks = char_text_splitter.split_text(text)
 
-docsearch = FAISS.from_texts(text_chunks, embeddings)
+documents = [Document(page_content=text, metadata={"source": "local"}) for text in text_chunks]
+
+docsearch = Chroma.from_documents(documents, embeddings)
 
 retriever = docsearch.as_retriever(lambda_val=0.025, k=2, filter=None)
 
