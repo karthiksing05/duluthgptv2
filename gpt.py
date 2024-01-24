@@ -31,6 +31,7 @@ def scrape_text_from_files(folder_path):
 class DuluthGPT(object):
 
     llm = None
+    memory = None
     retriever = None
 
     def __init__(self):
@@ -42,6 +43,8 @@ class DuluthGPT(object):
             temperature=0.01,
             repetition_penalty=1.03,
         )
+
+        self.memory = []
 
         self.retriever = None
 
@@ -60,6 +63,12 @@ class DuluthGPT(object):
                 finalStr += f.read()
         
         return finalStr
+    
+    def _memoryToStr(self):
+        memStr = ""
+        for exchange in self.memory:
+            memStr += f"Question: {exchange[0]}\nAnswer: {exchange[1]}\n"
+        return memStr
 
     def updateRetriever(self):
 
@@ -95,7 +104,7 @@ class DuluthGPT(object):
 
         docsLst = self.retriever.get_relevant_documents(query)
         docStr = "".join([doc.page_content + "\n\n" for doc in docsLst])
-        docStr = "Context:\n\n" + docStr
+        docStr = f"History:\n\n{self._memoryToStr()}\n\nContext:\n\n" + docStr
         docStr += f"\n\nNote: if there is no relevant information given to you in the context, do not answer this question with outside information. Say I don't know and tell the student to find an admin.\n\nQuestion: {query}\nAnswer:"
 
         try:
@@ -131,6 +140,8 @@ class DuluthGPT(object):
             data = data.split(stem)[0]
 
         data = data.strip()
+
+        self.memory.append([query, data])
 
         return data
 
