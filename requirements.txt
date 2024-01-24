@@ -16,3 +16,4 @@ wit
 text_generation
 pandas
 redis
+openpyxl

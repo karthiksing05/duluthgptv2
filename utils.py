@@ -2,6 +2,32 @@ import random
 
 import datetime
 import pandas as pd
+import os
+
+# TODO continue updating these
+SCHOOL_YEAR1 = 2023
+SCHOOL_YEAR2 = 2024
+
+counselorStr = """* For 9th Grade:
+    - If your last name STARTS WITH a letter between 'A' and 'L' (inclusive), your counselor is Mr. Terron Miller.
+        * Contact Mr. Terron Miller at: Terron.Miller@gcpsk12.org.
+    - If your last name STARTS WITH a letter between 'M' and 'Z', your counselor is Mrs. Brigette McClammey.
+        * Contact Mrs. Brigette McClammey at: brigette.mcclammey@gcpsk12.org.
+
+* For Grades Beyond 9th:
+    - If your last name STARTS WITH 'A' and goes up to 'CH', your counselor is Mrs. Delinda Coffey.
+        * Contact Mrs. Delinda Coffey at: Delinda.Coffey@gcpsk12.org.
+    - If your last name STARTS WITH 'CI' and goes up to 'GO', your counselor is Ms. Lindsey Ingwersen.
+        * Contact Ms. Lindsey Ingwersen at: Lindsey.Ingwersen@gcpsk12.org.
+    - If your last name STARTS WITH 'GR' and goes up to 'LI', your counselor is Mrs. Kim Tepker.
+        * Contact Mrs. Kim Tepker at: Kim.Tepker@gcpsk12.org.
+    - If your last name STARTS WITH 'LO' and goes up to 'OR', your counselor is Mr. Ryan Lilly.
+        * Contact Mr. Ryan Lilly at: Ryan.Lilly@gcpsk12.org.
+    - If your last name STARTS WITH 'OS' and goes up to 'SH', your counselor is Mrs. Mary Catherine Smoke.
+        * Contact Mrs. Mary Catherine Smoke at: marycatherine.smoke@gcpsk12.org.
+    - If your last name STARTS WITH 'SI' and goes up to 'Z', your counselor is Mrs. Lauren Smith.
+        * Contact Mrs. Lauren Smith at: Lauren.Smith@gcpsk12.org.
+"""
 
 def _pickRandomPrompt(name, email):
     prompts = [
@@ -66,7 +92,7 @@ GENIUS, can infinitely scale this!
 
 def updateCalendarEvents():
 
-    df = pd.read_csv("data/Calendar.csv")
+    df = pd.read_csv("data/GeneralCalendar.csv")
 
     for i, row in df.iterrows():
         row = list(row)
@@ -116,5 +142,44 @@ def updateCalendarEvents():
         )
         finalStr += "\n\n"
 
-    with open("docs/Calendar.txt", "w") as f:
+    with open("docs/dynamic/Calendar.txt", "w") as f:
         f.write(finalStr)
+
+# TODO create util function similar to above for sports schedules, if needed
+
+def updateSportingEvents():
+
+    dirPath = "data/sports/"
+    endPath = "docs/dynamic/SportsGames.txt"
+    templateStr = "Duluth High School will have their next {filename} game will be on {date} at {time}, against {opponent} at {venue}.\n\n"
+
+    finalStr = "Below are the sporting events for Duluth High School's spring semester! If someone asks about a sporting event or game, use this information to answer!\n\n"
+
+    for filename in [f for f in os.listdir(dirPath) if os.path.isfile(os.path.join(dirPath, f))]:
+        df = pd.read_excel(dirPath + filename)
+
+        dtNow = datetime.datetime.now()
+
+        for _, row in df.iterrows():
+            row = list(row)
+            dtStrp = datetime.datetime.strptime(row[0] + " 2024", "%b %d %Y")
+            if dtStrp.month > 6:
+                dtStrp = dtStrp.replace(year=SCHOOL_YEAR1)
+            else:
+                dtStrp = dtStrp.replace(year=SCHOOL_YEAR2)
+            if dtStrp < dtNow:
+                continue
+            finalStr += templateStr.format(
+                date=row[0],
+                time=row[1],
+                filename=filename.split(".")[0],
+                opponent=row[3],
+                venue=row[4]
+            )
+            break
+
+    with open(endPath, "w") as f:
+        f.write(finalStr)
+
+if __name__ == "__main__":
+    updateSportingEvents()
