@@ -15,7 +15,7 @@ for xKey in r.scan_iter("userExchange-*"):
             strRes = {}
             for key, val in res.items():
                 strRes[str(key.decode('utf-8'))] = str(val.decode('utf-8'))
-                f.write(xKey.decode('utf-8') + ": " + str(strRes))
+                f.write(xKey.decode('utf-8') + ": " + str(strRes) + "\n\n")
             r.delete(xKey)
     except UnicodeEncodeError:
         r.delete(xKey)
