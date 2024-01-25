@@ -104,7 +104,7 @@ class DuluthGPT(object):
 
         docsLst = self.retriever.get_relevant_documents(query)
         docStr = "".join([doc.page_content + "\n\n" for doc in docsLst])
-        docStr = f"History:\n\n{self._memoryToStr()}\n\nContext:\n\n" + docStr
+        docStr = f"Context:\n\n" + docStr
         docStr += f"\n\nNote: if there is no relevant information given to you in the context, do not answer this question with outside information. Say I don't know and tell the student to find an admin.\n\nQuestion: {query}\nAnswer:"
 
         try:
