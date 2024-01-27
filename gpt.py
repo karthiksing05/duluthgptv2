@@ -37,10 +37,10 @@ class DuluthGPT(object):
     def __init__(self):
         self.llm = HuggingFaceTextGenInference(
             inference_server_url="https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-alpha",
-            max_new_tokens=512,
-            top_k=10,
+            max_new_tokens=128,
+            top_k=5,
             top_p=0.3,
-            temperature=0.01,
+            temperature=0.1,
             repetition_penalty=1.03,
         )
 
@@ -110,9 +110,9 @@ class DuluthGPT(object):
         try:
             data = self.llm(docStr)
         except text_generation.errors.UnknownError:
-            return "DuluthGPT couldn't generate a proper response or is still loading: try asking the question in a different way or try refreshing the page!"
+            return "DuluthGPT couldn't generate a proper response or is still loading: try asking the question in a different way or try refreshing the page after a while!"
         except text_generation.errors.RateLimitExceededError:
-            return "Oops! Looks like a lot of people are using DuluthGPT right now! Please try again later."
+            return "DuluthGPT couldn't generate a proper response or is still loading: try asking the question in a different way or try refreshing the page after a while!"
 
         data = data[:data.rfind(".")]
         data += "."
