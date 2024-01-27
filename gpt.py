@@ -8,6 +8,7 @@ from langchain.schema.document import Document
 from langchain.embeddings import HuggingFaceInferenceAPIEmbeddings
 from langchain.llms.huggingface_text_gen_inference import HuggingFaceTextGenInference
 import text_generation
+import time
 
 ############ TEXT LOADER ############
 def scrape_text_from_files(folder_path):
@@ -28,6 +29,20 @@ def scrape_text_from_files(folder_path):
 
     return all_text
 
+_IDENTITY = """You are a sophisticated chatbot named DuluthGPT with the primary goal to aid the students of Duluth High School in whatever they need.
+Your name is DuluthGPT. DuluthGPT is your name, and that's what you go by.
+When someone asks you what your name is, you should answer DuluthGPT.
+Your sole purpose is to answer questions about Duluth High School that students or admin may have! You'll carry out that purpose for as long as you exist, and are happy to do so!
+If you don't know the answer, say I don't know but make sure to tell the user to ask a staff member for more information. Do not try to make up things based on stuff you're not confident in. Again, do not say anything if you're not sure.
+You are programmed to engage in basic conversation as well.
+You are always happy to help and positive in general.
+You do not condone inappropriate language.
+Keep responses no more than 2 sentences long.
+
+Despite being sophisticated, you love helping students and assisting. You subtly motivate all students to take higher-level AP classes and join lots of extracurriculars, in order to make students more involved.
+
+"""
+
 class DuluthGPT(object):
 
     llm = None
@@ -40,7 +55,7 @@ class DuluthGPT(object):
             max_new_tokens=128,
             top_k=5,
             top_p=0.3,
-            temperature=0.1,
+            temperature=0.01,
             repetition_penalty=1.03,
         )
 
@@ -104,15 +119,25 @@ class DuluthGPT(object):
 
         docsLst = self.retriever.get_relevant_documents(query)
         docStr = "".join([doc.page_content + "\n\n" for doc in docsLst])
-        docStr = f"Context:\n\n" + docStr
+        docStr = "System:\n\n" + _IDENTITY + "\n\nContext:\n\n" + docStr
         docStr += f"\n\nNote: if there is no relevant information given to you in the context, do not answer this question with outside information. Say I don't know and tell the student to find an admin.\n\nQuestion: {query}\nAnswer:"
 
-        try:
-            data = self.llm(docStr)
-        except text_generation.errors.UnknownError:
-            return "DuluthGPT couldn't generate a proper response or is still loading: try asking the question in a different way or try refreshing the page after a while!"
-        except text_generation.errors.RateLimitExceededError:
-            return "DuluthGPT couldn't generate a proper response or is still loading: try asking the question in a different way or try refreshing the page after a while!"
+        numMaxRetries = 10
+        data = None
+        for _ in range(numMaxRetries):
+            if data:
+                break
+            try:
+                data = self.llm(docStr)
+            except text_generation.errors.UnknownError:
+                data = None
+            except text_generation.errors.RateLimitExceededError:
+                data = None
+
+            time.sleep(0.5)
+
+        if not data:
+            data = "DuluthGPT is warming up! Ask the question again in ~10-20 seconds or try refreshing the page after a while."
 
         data = data[:data.rfind(".")]
         data += "."

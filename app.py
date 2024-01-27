@@ -19,10 +19,7 @@ def index():
 @app.route("/get", methods=["POST"])
 def chat():
     msg = request.form.get("msg")
-    try:
-        resp = askQuestionWit(msg).replace('\n', '<br>')
-    except AttributeError:
-        resp = "DuluthGPT couldn't properly process your message: please ask it more clearly!"
+    resp = askQuestionWit(msg).replace('\n', '<br>')
     exchangeId = datetime.datetime.now().strftime('%Y_%m_%d-%H_%M_%S')
     r.hset(f"userExchange-{exchangeId}", mapping={
         'input':msg,

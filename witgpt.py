@@ -41,6 +41,9 @@ def askQuestionWit(command):
 
     elif not intent_name:
         return duluthGPT.askQuestion(command)
+    
+    else:
+        return duluthGPT.askQuestion(command)
 
 if __name__ == "__main__":
     while True:
