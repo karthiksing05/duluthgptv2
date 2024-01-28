@@ -132,9 +132,9 @@ class DuluthGPT(object):
             except text_generation.errors.UnknownError as e:
                 print(f"Unknown Error: {e}")
                 data = None
-            except text_generation.errors.RateLimitExceededError:
-                print("Rate Limit Error")
-                data = None
+            # except text_generation.errors.RateLimitExceededError:
+            #     print("Rate Limit Error")
+            #     data = None
 
             time.sleep(0.5)
 
