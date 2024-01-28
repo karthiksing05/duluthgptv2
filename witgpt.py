@@ -1,6 +1,6 @@
 from wit import Wit
 from utils import getCounselor, counselorStr
-from gpt import DuluthGPT
+from gpt import SchoolGPT
 import pickle
 import datetime
 
@@ -9,7 +9,7 @@ with open("witkey.pickle", "rb") as f:
 
 client = Wit(WIT_KEY)
 
-duluthGPT = DuluthGPT()
+duluthGPT = SchoolGPT()
 
 def askQuestionWit(command):
 

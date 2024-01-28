@@ -1,4 +1,5 @@
 import os
+from typing import Any
 
 import utils
 
@@ -8,6 +9,9 @@ from langchain.schema.document import Document
 from langchain.embeddings import HuggingFaceInferenceAPIEmbeddings
 from langchain.llms.huggingface_text_gen_inference import HuggingFaceTextGenInference
 import text_generation
+
+import requests
+
 import time
 
 ############ TEXT LOADER ############
@@ -43,20 +47,59 @@ Despite being sophisticated, you love helping students and assisting. You subtly
 
 """
 
-class DuluthGPT(object):
+class SchoolGPT_HFWrapper(object):
+
+    model_url = ""
+
+    max_new_tokens = 0
+    top_k = 0
+    top_p = 0
+    temperature = 0
+    repetition_penalty = 0
+
+    def __init__(
+            self, 
+            model_url,
+            max_new_tokens=200,
+            top_k=5,
+            top_p=0.3,
+            temperature=0.01,
+            repetition_penalty=1.03
+        ):
+        self.model_url = model_url
+
+        self.max_new_tokens = max_new_tokens
+        self.top_k = top_k
+        self.top_p = top_p
+        self.temperature = temperature
+        self.repetition_penalty = repetition_penalty
+
+    def __call__(self, query):
+        headers = {"Authorization": f"Bearer {os.getenv('HUGGINGFACEHUB_API_TOKEN')}"}
+        API_URL = self.model_url
+        payload = {
+            "inputs": query,
+            "top_k": self.top_k,
+            "top_p": self.top_p,
+            "repetition_penalty": self.repetition_penalty,
+            "max_new_tokens": self.max_new_tokens,
+        }
+        resp = requests.post(API_URL, headers=headers, json=payload)
+        respDict = resp.json()
+        if "error" in respDict:
+            raise Exception("Error with the hugging face model!")
+        ans = respDict[0]["generated_text"].split("\nAnswer: ")[1]
+        return ans
+
+class SchoolGPT(object):
 
     llm = None
     memory = None
     retriever = None
 
     def __init__(self):
-        self.llm = HuggingFaceTextGenInference(
-            inference_server_url="https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-alpha",
-            max_new_tokens=128,
-            top_k=5,
-            top_p=0.3,
-            temperature=0.01,
-            repetition_penalty=1.03,
+        self.llm = SchoolGPT_HFWrapper(
+            model_url="https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-alpha"
         )
 
         self.memory = []
@@ -129,7 +172,7 @@ class DuluthGPT(object):
                 break
             try:
                 data = self.llm(docStr)
-            except text_generation.errors.UnknownError as e:
+            except Exception as e:
                 print(f"Unknown Error: {e}")
                 data = None
             # except text_generation.errors.RateLimitExceededError:
@@ -174,7 +217,7 @@ class DuluthGPT(object):
 
 if __name__ == "__main__":
 
-    duluthGPT = DuluthGPT()
+    duluthGPT = SchoolGPT()
 
     while True:
         query = input("Ask a Question! ")
