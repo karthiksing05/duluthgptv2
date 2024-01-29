@@ -51,6 +51,7 @@
 		<script>
 			$(document).ready(function() {
 				$("#messageArea").on("submit", function(event) {
+                    document.getElementById("send").disabled = true;
 					const date = new Date();
 					const hour = date.getHours() % 12;
                     if (hour == 0) {
@@ -84,6 +85,7 @@
 						$("#messageChatbox").append($.parseHTML(botHtml));
                         $("#messageChatbox").scrollTop($("#messageChatbox")[0].scrollHeight);
                         console.log("finished outputting message");
+                        document.getElementById("send").disabled = false;
 					});
 					event.preventDefault();
 				});

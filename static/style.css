@@ -65,10 +65,15 @@ body,html{
 }
 .send_btn{
 	border-radius: 0 15px 15px 0 !important;
-	background-color: rgba(0,0,0,0.3) !important;
+	background-color: rgba(0, 0, 0, 0.3) !important;
 	border:0 !important;
-	color: white !important;
+	color: rgb(183, 100, 255) !important;
 	cursor: pointer;
+}
+
+button:disabled {
+    background-color: rgba(100, 100, 100, 0.3) !important;
+    color: rgb(175, 175, 175) !important;
 }
 .search_btn{
 	border-radius: 0 15px 15px 0 !important;
