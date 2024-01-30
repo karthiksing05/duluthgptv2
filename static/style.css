@@ -28,6 +28,9 @@ body,html{
 	border-radius: 15px 15px 0 0 !important;
 	border-bottom: 0 !important;
 }
+.ml-auto{
+    float:right;
+}
 .card-footer{
     border-radius: 0 0 15px 15px !important;
 	border-top: 0 !important;
@@ -136,6 +139,7 @@ button:disabled {
 	margin-top: auto;
 	margin-bottom: auto;
 	margin-left: 15px;
+    flex-grow: 1;
 }
 .user_info span{
 	font-size: 20px;
@@ -191,6 +195,7 @@ button:disabled {
 }
 .msg_head{
 	position: relative;
+    top: 10px;
 }
 #action_menu_btn{
 	position: absolute;

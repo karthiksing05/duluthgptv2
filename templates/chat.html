@@ -30,6 +30,16 @@
 									<span>DuluthGPT</span>
 									<p>Ask me anything!</p>
 								</div>
+                                <div class="ml-auto">
+                                    <a href="https://forms.gle/5jPFUqymYYzsegvSA" target="_blank">
+                                        <img src="/static/info.png" class="icon" alt="Info Icon" width="32" height="32">
+                                    </a>
+                                </div>
+                                <div class="ml-auto">
+                                    <a href="https://forms.gle/r974MwaMEkPdmULv5" target="_blank">
+                                        <img src="/static/error.png" class="icon" alt="Error Icon" width="32" height="32">
+                                    </a>
+                                </div>
 							</div>
 						</div>
 						<div id="messageChatbox" class="card-body msg_card_body">
@@ -66,7 +76,7 @@
 					$("#text").val("");
 					$("#messageChatbox").append(userHtml);
 
-                    var loadingHtml = '<div id="loading" class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="/static/bot.jpg" class="rounded-circle user_img_msg"></div><div class="msg_container"><img src="/static/loading.gif" height=25 width=100><span class="msg_time">' + str_time + '</span></div></div>';
+                    var loadingHtml = '<div id="loading" class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="/static/bot.jpg" class="rounded-circle user_img_msg"></div><div class="msg_container"><img src="/static/loading.gif" alt="Loading..." height=25 width=100><span class="msg_time">' + str_time + '</span></div></div>';
                     $("#messageChatbox").append($.parseHTML(loadingHtml));
 
                     $("#messageChatbox").scrollTop($("#messageChatbox")[0].scrollHeight);
