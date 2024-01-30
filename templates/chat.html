@@ -8,7 +8,7 @@
 <html>
 	<head>
 		<title>DuluthGPT</title>
-        <link rel="icon" type="image/x-icon" href="/static/bot.png" width="64" height="64">
+        <link rel="icon" type="image/x-icon" href="/static/bot.jpg" width="64" height="64">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="/static/style.css"/>
@@ -23,7 +23,7 @@
 						<div class="card-header msg_head">
 							<div class="d-flex bd-highlight">
 								<div class="img_cont">
-									<img src="/static/bot.png" class="rounded-circle user_img">
+									<img src="/static/bot.jpg" class="rounded-circle user_img">
 									<span class="online_icon"></span>
 								</div>
 								<div class="user_info">
@@ -33,7 +33,7 @@
 							</div>
 						</div>
 						<div id="messageChatbox" class="card-body msg_card_body">
-							<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="/static/bot.png" class="rounded-circle user_img_msg"></div><div class="msg_container">Hello! I'm DuluthGPT, a chatbot designed to help you with any high school questions you may have.<br>Here are some questions you can ask me!<br>• "Who teaches AP Computer Science A?"<br>• "What are some STEM-related clubs I can join?"<br>• "When is the next Digital Learning Day?"<br>• "What are some scholarships I may be eligible for?"<span class="msg_time">00:00</span></div></div>
+							<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="/static/bot.jpg" class="rounded-circle user_img_msg"></div><div class="msg_container">Hello! I'm DuluthGPT, a chatbot designed to help you with any high school questions you may have.<br>Here are some questions you can ask me!<br>• "Who teaches AP Computer Science A?"<br>• "What are some STEM-related clubs I can join?"<br>• "When is the next Digital Learning Day?"<br>• "What are some scholarships I may be eligible for?"<span class="msg_time">00:00</span></div></div>
 							
 						</div>
 						<div class="card-footer">
@@ -66,7 +66,7 @@
 					$("#text").val("");
 					$("#messageChatbox").append(userHtml);
 
-                    var loadingHtml = '<div id="loading" class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="/static/bot.png" class="rounded-circle user_img_msg"></div><div class="msg_container"><img src="/static/loading.gif" height=25 width=100><span class="msg_time">' + str_time + '</span></div></div>';
+                    var loadingHtml = '<div id="loading" class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="/static/bot.jpg" class="rounded-circle user_img_msg"></div><div class="msg_container"><img src="/static/loading.gif" height=25 width=100><span class="msg_time">' + str_time + '</span></div></div>';
                     $("#messageChatbox").append($.parseHTML(loadingHtml));
 
                     $("#messageChatbox").scrollTop($("#messageChatbox")[0].scrollHeight);
@@ -81,7 +81,7 @@
                         let loadingElem =
                             document.getElementById("loading");
                         loadingElem.remove();
-						var botHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="/static/bot.png" class="rounded-circle user_img_msg"></div><div class="msg_container">' + data + '<span class="msg_time">' + str_time + '</span></div></div>';
+						var botHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="/static/bot.jpg" class="rounded-circle user_img_msg"></div><div class="msg_container">' + data + '<span class="msg_time">' + str_time + '</span></div></div>';
 						$("#messageChatbox").append($.parseHTML(botHtml));
                         $("#messageChatbox").scrollTop($("#messageChatbox")[0].scrollHeight);
                         console.log("finished outputting message");

@@ -8,14 +8,19 @@ r = redis.Redis(
     password=os.getenv("REDIS_PASSWD")
 )
 
+finalStr = ""
+
 for xKey in r.scan_iter("userExchange-*"):
     try:
-        with open(f"logs\\logAt{datetime.datetime.now().strftime('%Y-%m-%d')}.txt", "w+") as f:
-            res = dict(r.hgetall(xKey))
-            strRes = {}
-            for key, val in res.items():
-                strRes[str(key.decode('utf-8'))] = str(val.decode('utf-8'))
-                f.write(xKey.decode('utf-8') + ": " + str(strRes) + "\n\n")
-            r.delete(xKey)
+        res = dict(r.hgetall(xKey))
+        strRes = {}
+        print(res)
+        for key, val in res.items():
+            strRes[str(key.decode('utf-8'))] = str(val.decode('utf-8'))
+        finalStr += (xKey.decode('utf-8') + ": " + str(strRes) + "\n\n")
+        r.delete(xKey)
     except UnicodeEncodeError:
         r.delete(xKey)
+
+with open(f"logs\\logAt{datetime.datetime.now().strftime('%Y-%m-%d')}.txt", "w+") as f:
+    f.write(finalStr)
