@@ -60,7 +60,7 @@ class SchoolGPT_HFWrapper(object):
     def __init__(
             self, 
             model_url,
-            max_new_tokens=200,
+            max_new_tokens=256,
             top_k=5,
             top_p=0.3,
             temperature=0.01,
