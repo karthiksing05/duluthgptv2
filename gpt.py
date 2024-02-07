@@ -62,7 +62,7 @@ class SchoolGPT_HFWrapper(object):
             model_url,
             max_new_tokens=256,
             top_k=5,
-            top_p=0.3,
+            top_p=0.1,
             temperature=0.01,
             repetition_penalty=1.03
         ):
@@ -182,7 +182,7 @@ class SchoolGPT(object):
             time.sleep(0.5)
 
         if not data:
-            data = "DuluthGPT is warming up! Ask the question again in ~10-20 seconds or try refreshing the page after a while."
+            data = "DuluthGPT is querying the database and it's taking a while! Ask the question again in ~10-20 seconds or try refreshing the page after a while."
 
         data = data[:data.rfind(".")]
         data += "."
