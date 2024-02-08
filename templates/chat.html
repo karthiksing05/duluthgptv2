@@ -86,7 +86,7 @@
 					$("#text").val("");
 					$("#messageChatbox").append(userHtml);
 
-                    var loadingHtml = '<div id="loading" class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="/static/bot.jpg" class="rounded-circle user_img_msg"></div><div class="msg_container"><video autoplay loop muted playsinline><source src="/static/loading.mp4" type="video/mp4"></video><span class="msg_time">' + str_time + '</span></div></div>';
+                    var loadingHtml = '<div id="loading" class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="/static/bot.jpg" class="rounded-circle user_img_msg"></div><div class="msg_container"><img src="/static/loading.gif" alt="Loading..." height=25 width=100><span class="msg_time">' + str_time + '</span></div></div>';
                     $("#messageChatbox").append($.parseHTML(loadingHtml));
 
                     $("#messageChatbox").scrollTop($("#messageChatbox")[0].scrollHeight);
