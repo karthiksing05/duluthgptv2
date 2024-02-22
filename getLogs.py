@@ -22,5 +22,5 @@ for xKey in r.scan_iter("userExchange-*"):
     except UnicodeEncodeError:
         r.delete(xKey)
 
-with open(f"logs\\logAt{datetime.datetime.now().strftime('%Y-%m-%d')}.txt", "w+") as f:
+with open(f"logs\\logAt{datetime.datetime.now().strftime('%Y-%m-%d')}.txt", "w+", encoding="utf-8") as f:
     f.write(finalStr)
