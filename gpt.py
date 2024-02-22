@@ -49,7 +49,7 @@ Despite being sophisticated, you love helping students and assisting. You subtly
 
 """
 
-_MAX_MEMORY_SIZE = 3
+_MAX_MEMORY_SIZE = 2
 
 class HFWrapper(object):
 
@@ -103,7 +103,7 @@ class SchoolGPT(object):
 
     def __init__(self):
         self.llm = HFWrapper(
-            model_url="https://api-inference.huggingface.co/models/google/gemma-7b"
+            model_url="https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta"
         )
 
         self.memory = []
