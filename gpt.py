@@ -49,7 +49,7 @@ Despite being sophisticated, you love helping students and assisting. You subtly
 
 """
 
-class SchoolGPT_HFWrapper(object):
+class HFWrapper(object):
 
     model_url = ""
 
@@ -100,7 +100,7 @@ class SchoolGPT(object):
     retriever = None
 
     def __init__(self):
-        self.llm = SchoolGPT_HFWrapper(
+        self.llm = HFWrapper(
             model_url="https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-alpha"
         )
 
@@ -162,9 +162,11 @@ class SchoolGPT(object):
         if before != after:
             self.updateRetriever()
 
+        memoryStr = "".join([f"QUESTION: {q[0]}\nANSWER: {q[1]}\n\n" for q in self.memory])
+
         docsLst = self.retriever.get_relevant_documents(query)
         docStr = "".join([doc.page_content + "\n\n" for doc in docsLst])
-        docStr = "System:\n\n" + _IDENTITY + "\n\nContext:\n\n" + docStr
+        docStr = "System:\n\n" + _IDENTITY + "\n\nContext:\n\n" + docStr + "\n\nMemory:\n\n" + memoryStr
         docStr += f"\n\nNote: if there is no relevant information given to you in the context, do not answer this question with outside information. Say I don't know and tell the student to find an admin.\n\nQuestion: {query}\nAnswer:"
 
         numMaxRetries = 10
@@ -188,6 +190,8 @@ class SchoolGPT(object):
 
         data = data[:data.rfind(".")]
         data += "."
+
+        data = data[:data.rfind("\n")]
 
         postprocessStems = [
             "\nThe answer to the question",
