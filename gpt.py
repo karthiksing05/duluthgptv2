@@ -49,6 +49,8 @@ Despite being sophisticated, you love helping students and assisting. You subtly
 
 """
 
+_MAX_MEMORY_SIZE = 3
+
 class HFWrapper(object):
 
     model_url = ""
@@ -218,6 +220,8 @@ class SchoolGPT(object):
         data = data.strip()
 
         self.memory.append([query, data])
+        if len(self.memory) > _MAX_MEMORY_SIZE:
+            self.memory.pop(0)
 
         return data
 
