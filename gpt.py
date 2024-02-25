@@ -67,7 +67,7 @@ class HFWrapper(object):
             max_new_tokens=512,
             top_k=5,
             top_p=0.1,
-            temperature=0.005,
+            temperature=0.05,
             repetition_penalty=1.03
         ):
         self.model_url = model_url
@@ -192,8 +192,6 @@ class SchoolGPT(object):
 
         data = data[:data.rfind(".")]
         data += "."
-
-        data = data[:data.rfind("\n")]
 
         postprocessStems = [
             "\nThe answer to the question",

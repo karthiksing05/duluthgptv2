@@ -1,1 +1,2 @@
-- figure out eClass stuff
+- SPANISH --> is there an easy way to do this?
+- OPTIONAL -> add day counters for events later
