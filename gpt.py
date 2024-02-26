@@ -137,8 +137,8 @@ class SchoolGPT(object):
         train_directory = 'docs/'
         text = scrape_text_from_files(train_directory)
 
-        char_text_splitter = CharacterTextSplitter(separator="\n", chunk_size=800, 
-                                            chunk_overlap=200, length_function=len)
+        char_text_splitter = CharacterTextSplitter(separator="\n", chunk_size=300, 
+                                            chunk_overlap=50, length_function=len)
 
         embeddings = HuggingFaceInferenceAPIEmbeddings(
             api_key=os.getenv("HUGGINGFACEHUB_API_TOKEN"), model_name="sentence-transformers/multi-qa-MiniLM-L6-cos-v1"
