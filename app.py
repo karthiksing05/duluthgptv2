@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from witgpt import askQuestionWit
+from witgpt import askQuestionScreened
 import redis
 import os
 import datetime
@@ -19,7 +19,7 @@ def index():
 @app.route("/get", methods=["POST"])
 def chat():
     msg = request.form.get("msg")
-    resp = askQuestionWit(msg).replace('\n', '<br>')
+    resp = askQuestionScreened(msg).replace('\n', '<br>')
     exchangeId = datetime.datetime.now().strftime('%Y_%m_%d-%H_%M_%S')
     r.hset(f"userExchange-{exchangeId}", mapping={
         'input':msg,

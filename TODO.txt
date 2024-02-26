@@ -1,2 +1,3 @@
 - SPANISH --> is there an easy way to do this?
 - OPTIONAL -> add day counters for events later
+- Take the logs and classify them by category
