@@ -67,8 +67,8 @@ class HFWrapper(object):
             max_new_tokens=512,
             top_k=5,
             top_p=0.1,
-            temperature=0.05,
-            repetition_penalty=1.03
+            temperature=0.01,
+            repetition_penalty=1.5
         ):
         self.model_url = model_url
 
