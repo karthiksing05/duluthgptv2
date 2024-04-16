@@ -355,24 +355,15 @@ For 5th period, Ms. Ellis has 10th grade advisement and lunch.
 For 6th period, Ms. Ellis has a planning period.
 For 7th period, Ms. Ellis teaches 10th Grade Literature and Composition, also called 10th Lit HON. 
 
-Steve Fairchild, also known as Mr.
-Fairchild, is a teacher at Duluth High School.
-Mr.
-Fairchild teaches in room Old Gym and works in the Physical Education department.
-For 1st period, Mr.
-Fairchild teaches Recreational Games. 
-For 2nd period, Mr.
-Fairchild teaches Recreational Games. 
-For 3rd period, Mr.
-Fairchild teaches Team Sports. 
-For 4th period, Mr.
-Fairchild teaches -.
-For 5th period, Mr.
-Fairchild teaches -.
-For 6th period, Mr.
-Fairchild teaches -.
-For 7th period, Mr.
-Fairchild teaches -. 
+Steve Fairchild, also known as Mr. Fairchild, is a teacher at Duluth High School.
+Mr. Fairchild teaches in room Old Gym and works in the Physical Education department.
+For 1st period, Mr. Fairchild teaches Recreational Games. 
+For 2nd period, Mr. Fairchild teaches Recreational Games. 
+For 3rd period, Mr. Fairchild teaches Team Sports. 
+For 4th period, Mr. Fairchild teaches -.
+For 5th period, Mr. Fairchild teaches -.
+For 6th period, Mr. Fairchild teaches -.
+For 7th period, Mr. Fairchild teaches -. 
 
 Chelsea Fields, also known as Ms. Fields, is a teacher at Duluth High School.
 Ms. Fields teaches in TR 8 and works in the World Languages department.

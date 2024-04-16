@@ -49,7 +49,7 @@ Despite being sophisticated, you love helping students and assisting. You subtly
 
 """
 
-_MAX_MEMORY_SIZE = 2
+_MAX_MEMORY_SIZE = 1
 
 class HFWrapper(object):
 
@@ -208,7 +208,8 @@ class SchoolGPT(object):
             "\nPolite Answer",
             "\nPlease answer",
             "\nWhat",
-            "\nAgain"
+            "\nAgain",
+            "\n\n"
         ]
 
         data = data.strip()
