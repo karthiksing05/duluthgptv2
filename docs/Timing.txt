@@ -1,0 +1,21 @@
+School hours are from 7:15 to 2:10.
+
+1st period is from 7:15 to 8:13.
+
+2nd period is from 8:20 to 9:13.
+
+3rd period is from 9:20 to 10:13.
+
+4th period is from 10:20 to 11:12.
+4th period lunch A (also referred to as 4A Lunch or 4A Advisement or 4A Block) is from 10:20 to 10:44.
+4th period lunch B (also referred to as 4B Lunch or 4B Advisement or 4B Block) is from 10:49 to 11:12.
+
+5th period is from 11:19 to 12:11.
+5th period lunch A (also referred to as 5A Lunch or 5A Advisement or 5A Block) is from 11:19 to 11:43.
+5th period lunch B (also referred to as 5B Lunch or 5B Advisement or 5B Block) is from 11:48 to 12:11.
+
+6th period is from 12:18 to 1:10.
+6th period lunch A (also referred to as 6A Lunch or 6A Advisement or 6A Block) is from 12:18 to 12:42.
+6th period lunch B (also referred to as 6B Lunch or 6B Advisement or 6B Block) is from 12:47 to 1:10.
+
+7th period is from 1:17 to 2:10.
