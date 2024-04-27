@@ -30,6 +30,8 @@ def askQuestionScreened(command):
 
     if intent_name == "related" and intent_conf > 0.9:
         return _askQuestionWit(command)
+    
+    return "Sorry, I can only respond to questions related to Duluth High School. If your question is related to DHS and I've filtered it incorrectly, please try phrasing it a different way!"
 
 def _askQuestionWit(command):
 
