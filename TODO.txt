@@ -1,3 +1,6 @@
-- SPANISH --> is there an easy way to do this?
-- OPTIONAL -> add day counters for events later
-- Take the logs and classify them by category
+Here's the problem:
+- the list of files from every year needs to be repeatedly updated, for sure.
+- the dynamic files are fine but everything else needs clergy-ing and constant updating
+- the hardest thing will be getting someone to maintain / upkeep
+- most likely, what will happen is you find someone to take over, introduce them to git and github, and 
+  (this is the important part) migrate everything to an email so that people just "get" control once you leave
