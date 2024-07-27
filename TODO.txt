@@ -1,6 +1,6 @@
-Here's the problem:
-- the list of files from every year needs to be repeatedly updated, for sure.
-- the dynamic files are fine but everything else needs clergy-ing and constant updating
-- the hardest thing will be getting someone to maintain / upkeep
-- most likely, what will happen is you find someone to take over, introduce them to git and github, and 
-  (this is the important part) migrate everything to an email so that people just "get" control once you leave
+TODO to get DuluthGPT ready for next school year!
+- get a new calendar CSV file (ask admin)
+- get sports games files (honestly see if there's a way to scrape some online website for these, just for autonomy's sake, otherwise ask admin)
+- do proofs and find a way to check validity of the LLM (check querying schedules of teachers, teacher teaching stuff, rooms, etc.)
+- check other data sources
+- figure out how to advertise this!

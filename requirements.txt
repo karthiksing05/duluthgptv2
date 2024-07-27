@@ -1,6 +1,8 @@
 flask
 langchain
 accelerate
+langchain-community
+langchain-core
 langchain_experimental==0.0.4
 python-docx
 PyPDF2
