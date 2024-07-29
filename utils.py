@@ -114,7 +114,7 @@ def updateCalendarEvents():
 
     for i, row in df.iterrows():
         row = list(row)
-        if datetime.datetime.strptime(row[0].split("-")[-1], "%m/%d/%Y") < datetime.datetime.now():
+        if datetime.datetime.strptime(row[0].split("-")[-1], "%Y/%m/%d") < datetime.datetime.now():
             df = df.drop(i, axis="index")
         else:
             break
@@ -134,9 +134,6 @@ def updateCalendarEvents():
     for i, row in df.iterrows():
         row = list(row)
         name = row[1]
-
-        if "(F)" in name:
-            name.replace
 
         dateStr = row[0]
         if "-" in dateStr:

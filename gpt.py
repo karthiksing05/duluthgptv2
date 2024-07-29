@@ -214,6 +214,7 @@ class SchoolGPT(object):
             "\nPlease answer",
             "\nWhat",
             "\nAgain",
+            "\nResponse"
             "\n\n"
         ]
 
