@@ -105,7 +105,7 @@ class SchoolGPT(object):
 
     def __init__(self):
         self.llm = HFWrapper(
-            model_url="https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta"
+            model_url="https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-alpha"
         )
 
         self.memory = []
@@ -159,12 +159,15 @@ class SchoolGPT(object):
         before = self._checkFiles()
 
         utils.updateCalendarEvents()
-        utils.updateSportingEvents()
 
         after = self._checkFiles()
         
-        if before != after:
+        if before != after: # checks implicitly for date
+            print("needed to refresh retriever!")
+            utils.updateSportingEvents()
             self.updateRetriever()
+        else:
+            print("no updates made!")
 
         memoryStr = "".join([f"QUESTION: {q[0]}\nANSWER: {q[1]}\n\n" for q in self.memory])
 

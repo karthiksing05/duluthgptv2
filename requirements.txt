@@ -19,3 +19,4 @@ text_generation
 pandas
 redis
 openpyxl
+beautifulsoup4

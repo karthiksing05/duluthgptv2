@@ -1,0 +1,13 @@
+1st period happens from 7:15 AM to 8:13 AM. School starts at 7:15 AM.
+
+2nd period happens from 8:20 AM to 9:13 AM.
+
+3rd period happens from 9:20 AM to 10:13 AM.
+
+4th period happens from 10:20 AM to 11:12 AM. For some people, 4th period is a lunch period. Block A for this period (also called 4A) happens from 10:20 AM to 10:44 AM. Block B for this period (also called 4B) happens from 10:49 AM to 11:12 AM.
+
+5th period happens from 11:19 AM to 12:11 PM. For some people, 5th period is a lunch period. Block A for this period (also called 5A) happens from 11:19 AM to 11:43 AM. Block B for this period (also called 5B) happens from 11:48 AM to 12:11 PM.
+
+6th period happens from 12:18 PM to 1:10 PM. For some people, 6th period is a lunch period. Block A for this period (also called 6A) happens from 12:18 AM to 12:42 AM. Block B for this period (also called 6B) happens from 12:47 AM to 1:10 PM.
+
+7th period happens from 1:17 PM to 2:10 PM. Dismissal from school is at 2:10 PM.
