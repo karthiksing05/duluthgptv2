@@ -105,7 +105,7 @@ class SchoolGPT(object):
 
     def __init__(self):
         self.llm = HFWrapper(
-            model_url="https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-alpha"
+            model_url="https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta"
         )
 
         self.memory = []
